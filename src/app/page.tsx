@@ -1,103 +1,121 @@
+import Link from "next/link";
 import Image from "next/image";
+import FlowDiagram from "./components/FlowDiagram";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="lofi-container">
+      <div className="text-center lofi-mb-8 relative">
+        <div className="absolute w-full h-full left-0 top-0 opacity-10 pointer-events-none">
+          <div className="absolute w-20 h-20 rounded-full blur-3xl -top-10 left-1/3 animate-pulse" style={{ backgroundColor: "rgb(var(--accent-rgb))" }}></div>
+          <div className="absolute w-32 h-32 rounded-full blur-3xl -top-20 right-1/4 opacity-20 animate-pulse" style={{ backgroundColor: "rgb(var(--link-rgb))", animationDelay: "2s" }}></div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        
+        <h1 className="text-5xl font-bold mb-6 gradient-text">
+          Build a Next.js App with Cursor
+        </h1>
+        <p className="text-xl mb-4 lofi-paragraph" style={{ maxWidth: "48rem", margin: "0 auto" }}>
+          A comprehensive step-by-step guide to help you build and deploy a Next.js web application using Cursor IDE, GitHub, and Vercel.
+        </p>
+        <div className="inline-block lofi-border rounded-full px-3 py-1 lofi-bg-dark" style={{ color: "rgb(var(--accent-rgb))", fontSize: "0.875rem" }}>
+          📻 Lofi Tech Edition
+        </div>
+      </div>
+
+      <div className="relative glow">
+        <FlowDiagram />
+        <div className="absolute w-full h-full left-0 top-0 pointer-events-none">
+          <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-[80%] h-12 blur-3xl opacity-20" style={{ backgroundColor: "rgba(var(--accent-rgb), 0.2)" }}></div>
+        </div>
+      </div>
+
+      <div className="lofi-grid cols-4 lofi-my-16">
+        {[ 
+          { 
+            href: "/setup", 
+            title: "1. Setup", 
+            description: "Install and configure all necessary tools.",
+            icon: "🔧"
+          },
+          { 
+            href: "/cursor", 
+            title: "2. Cursor IDE", 
+            description: "Learn to use Cursor for building your app.",
+            icon: "⌨️" 
+          },
+          { 
+            href: "/github", 
+            title: "3. GitHub", 
+            description: "Connect your project for version control.",
+            icon: "🐙" 
+          },
+          { 
+            href: "/vercel", 
+            title: "4. Vercel", 
+            description: "Deploy your application to the world.",
+            icon: "🚀" 
+          } 
+         ].map((item, index) => (
+          <Link 
+            key={item.href}
+            href={item.href} 
+            className="lofi-card group"
+            style={{ animationDelay: `${index * 0.2}s` }}
+          >
+            <div className="lofi-flex mb-3">
+              <span className="text-2xl mr-3">{item.icon}</span>
+              <h2 className="text-2xl font-bold transition-colors" style={{ 
+                color: "rgb(var(--accent-rgb))"
+              }}>{item.title}</h2>
+            </div>
+            <p className="lofi-paragraph">{item.description}</p>
+          </Link>
+        ))}
+      </div>
+
+      <div className="lofi-card relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-40 h-40 rounded-full blur-2xl" style={{ backgroundColor: "rgba(var(--accent-rgb), 0.05)" }}></div>
+        <h2 className="text-2xl font-bold mb-6 gradient-text">Why This Stack?</h2>
+        <div className="lofi-grid cols-3">
+          {[ 
+            { 
+              title: "Cursor IDE", 
+              description: "AI-powered code editor for faster, smarter coding with enhanced productivity features.",
+              icon: "⌨️"
+            },
+            { 
+              title: "Next.js", 
+              description: "Powerful React framework for modern web apps with optimized performance and SEO.",
+              icon: "⚛️" 
+            },
+            { 
+              title: "Vercel + GitHub", 
+              description: "Seamless deployment and version control workflow for continuous delivery.",
+              icon: "🔄" 
+            }
+           ].map((stack) => (
+            <div 
+              key={stack.title} 
+              className="lofi-bg-dark p-6 rounded-xl lofi-border transition-all duration-300 group h-full"
+              style={{ borderColor: "rgba(var(--border-rgb), 0.5)" }}
+            >
+              <div className="lofi-flex mb-3">
+                <span className="text-2xl mr-3">{stack.icon}</span>
+                <h3 className="text-xl font-semibold" style={{ 
+                  color: "rgb(var(--link-rgb))"
+                }}>{stack.title}</h3>
+              </div>
+              <p className="lofi-paragraph">{stack.description}</p>
+            </div>
+          ))}
+        </div>
+        
+        <div className="lofi-flex center lofi-mt-8">
+          <Link href="/setup" className="lofi-button">
+            Start Learning →
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

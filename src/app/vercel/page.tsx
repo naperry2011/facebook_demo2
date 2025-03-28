@@ -1,0 +1,228 @@
+import Link from "next/link";
+import Image from "next/image";
+
+export default function VercelPage() {
+  return (
+    <div className="container mx-auto px-4 py-12">
+      <h1 className="text-3xl font-bold mb-6">Step 4: Deploying to Vercel</h1>
+      
+      <div className="mb-12">
+        <p className="text-xl mb-4">
+          In this final section, we'll deploy our Next.js application to Vercel, making it accessible to the world.
+        </p>
+      </div>
+
+      <div className="space-y-12">
+        <section className="bg-white p-6 rounded-lg shadow-md">
+          <h2 className="text-2xl font-bold mb-4">4.1 What is Vercel?</h2>
+          
+          <div className="space-y-4">
+            <p>
+              Vercel is a cloud platform for static sites and Serverless Functions that's perfectly suited for Next.js applications. It was created by the same team behind Next.js and offers:
+            </p>
+            
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Global CDN for fast content delivery</li>
+              <li>Automatic SSL certificates for secure connections</li>
+              <li>Preview deployments for every git branch or PR</li>
+              <li>Serverless Functions for backend logic</li>
+              <li>Environment variables for configuration</li>
+              <li>Custom domains for your projects</li>
+            </ul>
+          </div>
+        </section>
+
+        <section className="bg-white p-6 rounded-lg shadow-md">
+          <h2 className="text-2xl font-bold mb-4">4.2 Prepare Your Application</h2>
+          
+          <div className="space-y-4">
+            <p>Before deploying, make sure your application is ready:</p>
+            
+            <div className="bg-gray-50 p-4 rounded-lg">
+              <h3 className="font-semibold mb-2">Pre-deployment Checklist:</h3>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Ensure your application runs without errors locally</li>
+                <li>Check that all features work as expected</li>
+                <li>Make sure all changes are committed to GitHub</li>
+                <li>Verify your package.json has the correct scripts:</li>
+                <div className="bg-gray-800 text-white p-3 rounded mt-2 font-mono text-sm">
+{`"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint"
+}`}
+                </div>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white p-6 rounded-lg shadow-md">
+          <h2 className="text-2xl font-bold mb-4">4.3 Deploy to Vercel</h2>
+          
+          <div className="space-y-6">
+            <p>There are multiple ways to deploy to Vercel. We'll cover the easiest method: direct integration with GitHub.</p>
+            
+            <div className="bg-gray-50 p-4 rounded-lg">
+              <h3 className="font-semibold mb-2">Deploy using GitHub Integration:</h3>
+              <ol className="list-decimal pl-6 space-y-3">
+                <li>
+                  Log in to your Vercel account at <a href="https://vercel.com" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">vercel.com</a>
+                </li>
+                <li>
+                  Click "Add New..." and select "Project"
+                </li>
+                <li>
+                  Under "Import Git Repository", find and select your GitHub repository
+                  <p className="text-sm text-gray-600 mt-1">If you don't see your repository, you may need to click "Adjust GitHub App Permissions" to grant Vercel access</p>
+                </li>
+                <li>
+                  Vercel will automatically detect that it's a Next.js project and configure the build settings
+                </li>
+                <li>
+                  (Optional) Configure environment variables if your application needs them
+                </li>
+                <li>
+                  Click "Deploy"
+                </li>
+              </ol>
+            </div>
+            
+            <div className="bg-gray-50 p-4 rounded-lg">
+              <h3 className="font-semibold mb-2">Alternative: Deploy using Vercel CLI:</h3>
+              <ol className="list-decimal pl-6 space-y-2">
+                <li>Install the Vercel CLI globally:</li>
+                <div className="bg-gray-800 text-white p-2 rounded mt-1 font-mono text-sm">
+                  npm install -g vercel
+                </div>
+                <li>Run the deployment command from your project directory:</li>
+                <div className="bg-gray-800 text-white p-2 rounded mt-1 font-mono text-sm">
+                  vercel
+                </div>
+                <li>Follow the prompts to log in and configure your project</li>
+                <li>Once complete, your project will be deployed to a *.vercel.app URL</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white p-6 rounded-lg shadow-md">
+          <h2 className="text-2xl font-bold mb-4">4.4 Continuous Deployment</h2>
+          
+          <div className="space-y-4">
+            <p>
+              One of the best features of Vercel is continuous deployment. Once set up, every time you push changes to your GitHub repository, Vercel will automatically deploy them.
+            </p>
+            
+            <div className="bg-gray-50 p-4 rounded-lg">
+              <h3 className="font-semibold mb-2">How It Works:</h3>
+              <ol className="list-decimal pl-6 space-y-2">
+                <li>Make changes to your code locally</li>
+                <li>Commit the changes to Git</li>
+                <li>Push to GitHub</li>
+                <div className="bg-gray-800 text-white p-2 rounded mt-1 font-mono text-sm">
+                  git push origin main
+                </div>
+                <li>Vercel automatically detects the new commit and starts a new deployment</li>
+                <li>Once the build completes, your changes are live</li>
+              </ol>
+            </div>
+            
+            <div className="bg-gray-50 p-4 rounded-lg">
+              <h3 className="font-semibold mb-2">Preview Deployments:</h3>
+              <p>
+                When you create a pull request, Vercel will deploy a preview version of your application with the changes. This allows you to test changes before merging them into the main branch.
+              </p>
+              <p className="mt-2">
+                Each PR gets its own unique URL for testing, making team collaboration seamless.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white p-6 rounded-lg shadow-md">
+          <h2 className="text-2xl font-bold mb-4">4.5 Custom Domains</h2>
+          
+          <div className="space-y-4">
+            <p>
+              Once your application is deployed, you can add a custom domain to make it more professional.
+            </p>
+            
+            <div className="bg-gray-50 p-4 rounded-lg">
+              <h3 className="font-semibold mb-2">Adding a Custom Domain:</h3>
+              <ol className="list-decimal pl-6 space-y-2">
+                <li>Go to your project on the Vercel dashboard</li>
+                <li>Click on "Settings" at the top</li>
+                <li>Select "Domains" from the left sidebar</li>
+                <li>Enter your domain name and click "Add"</li>
+                <li>Follow the instructions to configure your DNS settings</li>
+              </ol>
+              <p className="mt-2">
+                Vercel will provide you with specific instructions based on your domain registrar. Typically, you'll need to add either a CNAME or A record pointing to Vercel's servers.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 p-4 rounded-lg">
+              <h3 className="font-semibold mb-2">SSL Certificates:</h3>
+              <p>
+                Vercel automatically provisions SSL certificates for all domains, including custom domains. This ensures your site is always served over HTTPS for better security.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white p-6 rounded-lg shadow-md">
+          <h2 className="text-2xl font-bold mb-4">4.6 Monitoring and Analytics</h2>
+          
+          <div className="space-y-4">
+            <p>
+              Vercel provides basic analytics and monitoring for your deployed applications.
+            </p>
+            
+            <div className="bg-gray-50 p-4 rounded-lg">
+              <h3 className="font-semibold mb-2">Deployment Monitoring:</h3>
+              <ul className="list-disc pl-6 space-y-2">
+                <li><strong>Build Logs:</strong> View logs from the build process to troubleshoot issues</li>
+                <li><strong>Deployment History:</strong> See all previous deployments and their status</li>
+                <li><strong>Rollbacks:</strong> Easily roll back to a previous deployment if needed</li>
+              </ul>
+            </div>
+            
+            <div className="bg-gray-50 p-4 rounded-lg">
+              <h3 className="font-semibold mb-2">Performance Monitoring:</h3>
+              <p>
+                Vercel offers Web Vitals monitoring to help you track and improve your application's performance.
+              </p>
+              <ul className="list-disc pl-6 space-y-2 mt-2">
+                <li>Largest Contentful Paint (LCP)</li>
+                <li>First Input Delay (FID)</li>
+                <li>Cumulative Layout Shift (CLS)</li>
+                <li>Time to First Byte (TTFB)</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+      
+      <div className="bg-green-50 border border-green-200 p-6 rounded-lg mt-12">
+        <h2 className="text-2xl font-bold text-green-800 mb-4">🎉 Congratulations!</h2>
+        <p className="text-lg text-green-700">
+          You've successfully completed all the steps to build and deploy a Next.js application using Cursor IDE, GitHub, and Vercel. Your web application is now live and accessible to users around the world!
+        </p>
+        <p className="mt-4 text-green-700">
+          This is just the beginning of your journey. You can now continue to improve your application by adding new features, optimizing performance, and building your user base.
+        </p>
+      </div>
+
+      <div className="mt-12 flex justify-between">
+        <Link href="/github" className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200">
+          ← Back to GitHub Guide
+        </Link>
+        <Link href="/" className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-black hover:bg-gray-800">
+          Return to Home
+        </Link>
+      </div>
+    </div>
+  );
+} 
