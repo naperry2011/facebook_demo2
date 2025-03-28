@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { ReactNode } from "react";
-import MobileMenu from "./components/MobileMenu";
+import MobileMenu from "@/app/components/MobileMenu";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

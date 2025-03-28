@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export default function VercelPage() {
   return (
@@ -8,7 +7,7 @@ export default function VercelPage() {
       
       <div className="mb-12">
         <p className="text-xl mb-4">
-          In this final section, we'll deploy our Next.js application to Vercel, making it accessible to the world.
+          In this final section, we&apos;ll deploy our Next.js application to Vercel, making it accessible to the world.
         </p>
       </div>
 
@@ -18,7 +17,7 @@ export default function VercelPage() {
           
           <div className="space-y-4">
             <p>
-              Vercel is a cloud platform for static sites and Serverless Functions that's perfectly suited for Next.js applications. It was created by the same team behind Next.js and offers:
+              Vercel is a cloud platform for static sites and Serverless Functions that&apos;s perfectly suited for Next.js applications. It was created by the same team behind Next.js and offers:
             </p>
             
             <ul className="list-disc pl-6 space-y-2">
@@ -62,7 +61,7 @@ export default function VercelPage() {
           <h2 className="text-2xl font-bold mb-4">4.3 Deploy to Vercel</h2>
           
           <div className="space-y-6">
-            <p>There are multiple ways to deploy to Vercel. We'll cover the easiest method: direct integration with GitHub.</p>
+            <p>There are multiple ways to deploy to Vercel. We&apos;ll cover the easiest method: direct integration with GitHub.</p>
             
             <div className="bg-gray-50 p-4 rounded-lg">
               <h3 className="font-semibold mb-2">Deploy using GitHub Integration:</h3>
@@ -71,20 +70,20 @@ export default function VercelPage() {
                   Log in to your Vercel account at <a href="https://vercel.com" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">vercel.com</a>
                 </li>
                 <li>
-                  Click "Add New..." and select "Project"
+                  Click &quot;Add New...&quot; and select &quot;Project&quot;
                 </li>
                 <li>
-                  Under "Import Git Repository", find and select your GitHub repository
-                  <p className="text-sm text-gray-600 mt-1">If you don't see your repository, you may need to click "Adjust GitHub App Permissions" to grant Vercel access</p>
+                  Under &quot;Import Git Repository&quot;, find and select your GitHub repository
+                  <p className="text-sm text-gray-600 mt-1">If you don&apos;t see your repository, you may need to click &quot;Adjust GitHub App Permissions&quot; to grant Vercel access</p>
                 </li>
                 <li>
-                  Vercel will automatically detect that it's a Next.js project and configure the build settings
+                  Vercel will automatically detect that it&apos;s a Next.js project and configure the build settings
                 </li>
                 <li>
                   (Optional) Configure environment variables if your application needs them
                 </li>
                 <li>
-                  Click "Deploy"
+                  Click &quot;Deploy&quot;
                 </li>
               </ol>
             </div>
@@ -153,13 +152,13 @@ export default function VercelPage() {
               <h3 className="font-semibold mb-2">Adding a Custom Domain:</h3>
               <ol className="list-decimal pl-6 space-y-2">
                 <li>Go to your project on the Vercel dashboard</li>
-                <li>Click on "Settings" at the top</li>
-                <li>Select "Domains" from the left sidebar</li>
-                <li>Enter your domain name and click "Add"</li>
+                <li>Click on &quot;Settings&quot; at the top</li>
+                <li>Select &quot;Domains&quot; from the left sidebar</li>
+                <li>Enter your domain name and click &quot;Add&quot;</li>
                 <li>Follow the instructions to configure your DNS settings</li>
               </ol>
               <p className="mt-2">
-                Vercel will provide you with specific instructions based on your domain registrar. Typically, you'll need to add either a CNAME or A record pointing to Vercel's servers.
+                Vercel will provide you with specific instructions based on your domain registrar. Typically, you&apos;ll need to add either a CNAME or A record pointing to Vercel&apos;s servers.
               </p>
             </div>
             
@@ -216,11 +215,11 @@ export default function VercelPage() {
       </div>
 
       <div className="mt-12 flex justify-between">
-        <Link href="/github" className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200">
+        <Link href="/github" className="px-5 py-2.5 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors">
           ← Back to GitHub Guide
         </Link>
-        <Link href="/" className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-black hover:bg-gray-800">
-          Return to Home
+        <Link href="/" className="bg-blue-500 text-white px-5 py-2.5 rounded-md hover:bg-blue-600 transition-colors">
+          Back to Home
         </Link>
       </div>
     </div>

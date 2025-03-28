@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export default function SetupPage() {
   return (
@@ -40,7 +39,7 @@ export default function SetupPage() {
               <ol className="list-decimal pl-6 space-y-3 lofi-paragraph">
                 <li>Create an account or sign in if you already have one</li>
                 <li>Connect to your OpenAI account if you want to use GPT-4 integration</li>
-                <li>Take the onboarding tour to learn about Cursor's AI features</li>
+                <li>Take the onboarding tour to learn about Cursor&apos;s AI features</li>
               </ol>
             </div>
           </div>
@@ -81,14 +80,14 @@ export default function SetupPage() {
             <h2 className="text-2xl font-bold" style={{ color: "rgb(var(--accent-rgb))" }}>1.3 Create GitHub Account</h2>
           </div>
           
-          <p className="mb-6 lofi-paragraph">GitHub is where we'll store our code and integrate with Vercel for deployment.</p>
+          <p className="mb-6 lofi-paragraph">GitHub is where we&apos;ll store our code and integrate with Vercel for deployment.</p>
           
           <div className="space-y-6">
             <div className="lofi-bg-dark p-5 rounded-lg lofi-border">
               <h3 className="font-semibold mb-3" style={{ color: "rgb(var(--link-rgb))" }}>Sign Up:</h3>
               <ol className="list-decimal pl-6 space-y-3 lofi-paragraph">
                 <li>Visit <a href="https://github.com" className="text-link hover:text-link-hover border-b border-link/30 hover:border-link transition-colors" target="_blank" rel="noopener noreferrer">https://github.com</a></li>
-                <li>Click "Sign up" and create a new account if you don't have one</li>
+                <li>Click &quot;Sign up&quot; and create a new account if you don&apos;t have one</li>
                 <li>Follow the onboarding process to set up your account</li>
               </ol>
             </div>
@@ -103,7 +102,7 @@ export default function SetupPage() {
             <h2 className="text-2xl font-bold" style={{ color: "rgb(var(--accent-rgb))" }}>1.4 Create Vercel Account</h2>
           </div>
           
-          <p className="mb-6 lofi-paragraph">Vercel is the platform we'll use to deploy our Next.js application.</p>
+          <p className="mb-6 lofi-paragraph">Vercel is the platform we&apos;ll use to deploy our Next.js application.</p>
           
           <div className="space-y-6">
             <div className="lofi-bg-dark p-5 rounded-lg lofi-border">

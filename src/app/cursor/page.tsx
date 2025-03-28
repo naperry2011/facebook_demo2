@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export default function CursorPage() {
   return (
@@ -8,7 +7,7 @@ export default function CursorPage() {
       
       <div className="mb-12">
         <p className="text-xl mb-4">
-          In this section, we'll walk through using Cursor IDE to create a Next.js application from scratch.
+          In this section, we&apos;ll walk through using Cursor IDE to create a Next.js application from scratch.
         </p>
       </div>
 
@@ -21,7 +20,7 @@ export default function CursorPage() {
               <h3 className="font-semibold mb-2">Launch Cursor and Set Up Your Project:</h3>
               <ol className="list-decimal pl-6 space-y-3">
                 <li>Open Cursor IDE</li>
-                <li>Click on "Create New" or navigate to File &gt; New Folder</li>
+                <li>Click on &quot;Create New&quot; or navigate to File &gt; New Folder</li>
                 <li>Choose a location for your project and give it a name</li>
                 <li>Open a terminal in Cursor (Terminal &gt; New Terminal)</li>
                 <li>Run the following command to create a new Next.js project:</li>
@@ -95,9 +94,9 @@ export default function CursorPage() {
               <div className="bg-gray-50 p-4 rounded-lg mt-2">
                 <p className="font-semibold">Example prompts:</p>
                 <ul className="list-disc pl-6 mt-1">
-                  <li>"How do I create a new page in Next.js App Router?"</li>
-                  <li>"Write a simple navigation component using Tailwind CSS"</li>
-                  <li>"Explain how data fetching works in Next.js 13+"</li>
+                  <li>&quot;How do I create a new page in Next.js App Router?&quot;</li>
+                  <li>&quot;Write a simple navigation component using Tailwind CSS&quot;</li>
+                  <li>&quot;Explain how data fetching works in Next.js 13+&quot;</li>
                 </ul>
               </div>
             </div>
@@ -277,11 +276,11 @@ export default function Home() {
       </div>
 
       <div className="mt-12 flex justify-between">
-        <Link href="/setup" className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200">
+        <Link href="/setup" className="px-5 py-2.5 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors">
           ← Back to Setup
         </Link>
-        <Link href="/github" className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-black hover:bg-gray-800">
-          Continue to GitHub Guide →
+        <Link href="/github" className="bg-blue-500 text-white px-5 py-2.5 rounded-md hover:bg-blue-600 transition-colors">
+          Continue to GitHub →
         </Link>
       </div>
     </div>

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export default function GitHubPage() {
   return (
@@ -8,7 +7,7 @@ export default function GitHubPage() {
       
       <div className="mb-12">
         <p className="text-xl mb-4">
-          In this section, we'll connect our Next.js application to GitHub for version control and collaboration.
+          In this section, we&apos;ll connect our Next.js application to GitHub for version control and collaboration.
         </p>
       </div>
 
@@ -45,22 +44,22 @@ git commit -m "Initial commit"`}
                   Log in to your GitHub account at <a href="https://github.com" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">github.com</a>
                 </li>
                 <li>
-                  Click the "+" icon in the top-right corner, then select "New repository"
+                  Click the &quot;+&quot; icon in the top-right corner, then select &quot;New repository&quot;
                 </li>
                 <li>
-                  Enter a repository name (e.g., "nextjs-todo-app")
+                  Enter a repository name (e.g., &quot;nextjs-todo-app&quot;)
                 </li>
                 <li>
                   Add an optional description
                 </li>
                 <li>
-                  Choose "Public" or "Private" visibility (Public repositories are visible to everyone)
+                  Choose &quot;Public&quot; or &quot;Private&quot; visibility (Public repositories are visible to everyone)
                 </li>
                 <li>
-                  <strong>Don't</strong> initialize the repository with a README, .gitignore, or license since we're pushing an existing repository
+                  <strong>Don&apos;t</strong> initialize the repository with a README, .gitignore, or license since we&apos;re pushing an existing repository
                 </li>
                 <li>
-                  Click "Create repository"
+                  Click &quot;Create repository&quot;
                 </li>
               </ol>
             </div>
@@ -148,7 +147,7 @@ git push -u origin main`}
                   </div>
                 </li>
                 <li>
-                  <strong>Use .gitignore:</strong> Make sure sensitive files and build artifacts aren't committed
+                  <strong>Use .gitignore:</strong> Make sure sensitive files and build artifacts aren&apos;t committed
                 </li>
                 <li>
                   <strong>Write descriptive commit messages:</strong> Explain what changes you made and why
@@ -181,10 +180,10 @@ git push -u origin main`}
       </div>
 
       <div className="mt-12 flex justify-between">
-        <Link href="/cursor" className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200">
+        <Link href="/cursor" className="px-5 py-2.5 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors">
           ← Back to Cursor Guide
         </Link>
-        <Link href="/vercel" className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-black hover:bg-gray-800">
+        <Link href="/vercel" className="bg-blue-500 text-white px-5 py-2.5 rounded-md hover:bg-blue-600 transition-colors">
           Continue to Vercel Deployment →
         </Link>
       </div>
